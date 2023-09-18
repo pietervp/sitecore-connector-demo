@@ -1,0 +1,17 @@
+{
+  "name": "sitecore-connector",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun helpers/pre_build.js && bun x tsc -p tsconfig.build.json && bun helpers/post_build.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "typescript": "^5.2.2"
+  }
+}
