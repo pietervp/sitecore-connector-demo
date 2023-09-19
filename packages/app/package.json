@@ -12,7 +12,7 @@
     "@chili-publish/studio-sdk": "^0.148.0"
   },
   "scripts": {
-    "build": "bun run helpers/pre_build.js && bun build --target=browser --outfile=public/js/index.js index.ts",
+    "build": "bun run helpers/pre_build.js && bun build --target=browser --outfile=public/js/index.js frontend.ts",
     "server": "bun run build && bun run --watch server.ts"
   }
 }

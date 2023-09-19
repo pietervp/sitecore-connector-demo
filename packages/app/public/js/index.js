@@ -9842,7 +9842,7 @@ var require_main = __commonJS((exports, module) => {
   })());
 });
 
-// index.ts
+// frontend.ts
 var studio_sdk = __toESM(require_main(), 1);
 async function load() {
   var info = await fetch("./api/info").then((res) => res.json());
