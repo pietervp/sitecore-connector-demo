@@ -1,5 +1,5 @@
 # check if ~/.bun exists
-if [ ! -d ~/.bun ]; then
+if (! command -v bun &> /dev/null) || [ ! -d ~/.bun ]; then
 
     bash_configs=(
         "$HOME/.bashrc"
@@ -17,4 +17,4 @@ if [ ! -d ~/.bun ]; then
 fi
 
 (cd packages/connector && bun install && bun run build)
-(cd packages/app && bun install && bun run server)
+(cd packages/app && bun install &&  bun run build && bun run build-studio && bun run server)

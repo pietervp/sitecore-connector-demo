@@ -19,10 +19,34 @@ var CGX_TOKEN: string, SITECORE_TOKEN: string;
 
 await refreshTokens();
 
+console.log("Listening on port 3004");
+console.log("Navigate to http://localhost:3004/sdk.html for the SDK integration");
+console.log("Navigate to http://localhost:3004/studio.html for the Studio UI integration");
+
 Bun.serve({
-    port: 3000,
+    port: 3004,
     async fetch(req) {
         const url = new URL(req.url);
+
+        // if root path, redirect to /index.html
+        if (url.pathname === "/") {
+            return new Response(null, {
+                status: 302,
+                headers: {
+                    Location: "/studio.html",
+                },
+            });
+        }
+
+        // if studio-ui.js was requested, serve another file
+        if (url.pathname === "/studio-ui.js") {
+            return new Response(Bun.file("/home/pietervp/studio-ui/dist/bundle.js"));
+        }
+
+        // if studio-ui.css was requested, serve another file
+        if (url.pathname === "/index.css") {
+            return new Response(Bun.file("/home/pietervp/studio-ui/dist/main.css"));
+        }
 
         // api server
         if (url.pathname.startsWith("/api/connector/grafx")) {

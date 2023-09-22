@@ -8,11 +8,11 @@ export class ContentHubConnector {
         return Promise.resolve({
             data: [
                 {
-                    id: "1",
+                    id: "https://dummyimage.com/600x400/000/fff",
                     name: "test",
                     type: 0,
                     preview: {
-                        url: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+                        url: "https://dummyimage.com/600x400/000/fff",
                         width: 272,
                         height: 92
                     },
@@ -31,7 +31,24 @@ export class ContentHubConnector {
     }
     detail(id, context) {
         this.log("detail", { id, context });
-        throw new Error("Detail Method not implemented.");
+        return Promise.resolve({
+            id: "https://dummyimage.com/600x400/000/fff",
+            name: "test",
+            type: 0,
+            preview: {
+                url: "https://dummyimage.com/600x400/000/fff",
+                width: 272,
+                height: 92
+            },
+            extension: "png",
+            width: 272,
+            height: 92,
+            relativePath: "/test",
+            metaData: {
+                "api": this.runtime.options["SITECORE_API_BASE"] ?? "not set",
+                "test": "random value"
+            }
+        });
     }
     async download(id, previewType, context) {
         this.log("download", { id, previewType, context });
@@ -63,7 +80,7 @@ export class ContentHubConnector {
             remove: false,
             query: true,
             detail: false,
-            filtering: false,
+            filtering: true,
         };
     }
     // generic method log, taking a name, and a data object
