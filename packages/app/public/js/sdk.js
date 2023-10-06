@@ -1994,7 +1994,7 @@ var require_main = __commonJS((exports, module) => {
     var __webpack_exports__ = {};
     return (() => {
       var enums_MessageType, Resolution, ErrorCode, NativeErrorName, enums_NativeEventType;
-      __webpack_require__.r(__webpack_exports__), __webpack_require__.d(__webpack_exports__, { ActionEditorEvent: () => ActionEditorEvent, Alignment: () => Alignment, BasicAnimationsEmphasisStyles: () => BasicAnimationsEmphasisStyles, BlendMode: () => BlendMode, Case: () => Case, ColorType: () => ColorType, ConnectorEventType: () => ConnectorEventType, ConnectorMapping: () => ConnectorMapping, ConnectorMappingSource: () => ConnectorMappingSource, ConnectorMappingTarget: () => ConnectorMappingTarget, ConnectorRegistrationSource: () => ConnectorRegistrationSource, ConnectorStateType: () => ConnectorStateType, ConnectorType: () => ConnectorType, CornerRadiusType: () => CornerRadiusType, DeprecatedMediaType: () => DeprecatedMediaType, DocumentType: () => DocumentType, DownloadFormats: () => DownloadFormats, EaseTypes: () => EaseTypes, EnvironmentType: () => EnvironmentType, FitMode: () => FitMode, FlowDirection: () => FlowDirection, FontDownloadType: () => FontDownloadType, FontWeights: () => FontWeights, FramePropertyNames: () => FramePropertyNames, FrameTypeEnum: () => FrameTypeEnum, ImageSourceTypeEnum: () => ImageSourceTypeEnum, LayoutPropertyNames: () => LayoutPropertyNames, LayoutType: () => LayoutType, MediaDownloadType: () => MediaDownloadType, MediaType: () => MediaType, Scripting: () => Scripting, SelectedTextStyleSections: () => SelectedTextStyleSections, SelectedTextStyles: () => SelectedTextStyles, ShakeDirections: () => ShakeDirections, ShapeType: () => ShapeType, SlideDirections: () => SlideDirections, SortBy: () => SortBy, SortOrder: () => SortOrder, TextDirection: () => TextDirection, TextPosition: () => TextPosition, ToolType: () => ToolType, TweenTypes: () => TweenTypes, UpdateZIndexMethod: () => UpdateZIndexMethod, VariableType: () => VariableType, VerticalAlign: () => VerticalAlign, WellKnownConfigurationKeys: () => WellKnownConfigurationKeys, default: () => src }), function(MessageType) {
+      __webpack_require__.r(__webpack_exports__), __webpack_require__.d(__webpack_exports__, { ActionEditorEvent: () => ActionEditorEvent, Alignment: () => Alignment, BasicAnimationsEmphasisStyles: () => BasicAnimationsEmphasisStyles, BlendMode: () => BlendMode, Case: () => Case, ColorType: () => ColorType, ConnectorEventType: () => ConnectorEventType, ConnectorMapping: () => ConnectorMapping, ConnectorMappingSource: () => ConnectorMappingSource, ConnectorRegistrationSource: () => ConnectorRegistrationSource, ConnectorStateType: () => ConnectorStateType, ConnectorType: () => ConnectorType, CornerRadiusType: () => CornerRadiusType, DeprecatedMediaType: () => DeprecatedMediaType, DocumentType: () => DocumentType, DownloadFormats: () => DownloadFormats, EaseTypes: () => EaseTypes, EnvironmentType: () => EnvironmentType, FitMode: () => FitMode, FlowDirection: () => FlowDirection, FontDownloadType: () => FontDownloadType, FontWeights: () => FontWeights, FramePropertyNames: () => FramePropertyNames, FrameTypeEnum: () => FrameTypeEnum, ImageSourceTypeEnum: () => ImageSourceTypeEnum, LayoutPropertyNames: () => LayoutPropertyNames, LayoutType: () => LayoutType, MediaDownloadType: () => MediaDownloadType, MediaType: () => MediaType, Scripting: () => Scripting, SelectedTextStyleSections: () => SelectedTextStyleSections, SelectedTextStyles: () => SelectedTextStyles, ShakeDirections: () => ShakeDirections, ShapeType: () => ShapeType, SlideDirections: () => SlideDirections, SortBy: () => SortBy, SortOrder: () => SortOrder, TextDirection: () => TextDirection, TextPosition: () => TextPosition, ToolType: () => ToolType, TweenTypes: () => TweenTypes, UpdateZIndexMethod: () => UpdateZIndexMethod, VariableType: () => VariableType, VerticalAlign: () => VerticalAlign, WellKnownConfigurationKeys: () => WellKnownConfigurationKeys, default: () => src, grafxMediaConnectorRegistration: () => grafxMediaConnectorRegistration }), function(MessageType) {
         MessageType.Call = "call", MessageType.Reply = "reply", MessageType.Syn = "syn", MessageType.SynAck = "synAck", MessageType.Ack = "ack";
       }(enums_MessageType || (enums_MessageType = {})), function(Resolution2) {
         Resolution2.Fulfilled = "fulfilled", Resolution2.Rejected = "rejected";
@@ -2212,7 +2212,7 @@ var require_main = __commonJS((exports, module) => {
       (function(WellKnownConfigurationKeys2) {
         WellKnownConfigurationKeys2.GraFxStudioEnvironmentApiUrl = "ENVIRONMENT_API", WellKnownConfigurationKeys2.GraFxStudioSdkVersion = "SDK_VERSION", WellKnownConfigurationKeys2.GraFxStudioDocumentType = "DOCUMENT_TYPE", WellKnownConfigurationKeys2.GraFxStudioTemplateId = "TEMPLATE_ID", WellKnownConfigurationKeys2.GraFxStudioAuthToken = "GRAFX_AUTH_TOKEN";
       })(WellKnownConfigurationKeys || (WellKnownConfigurationKeys = {}));
-      const defaultStudioOptions = { shortcutOptions: { debugPanel: { enabled: false }, ellipse: { enabled: false }, hand: { enabled: false }, image: { enabled: false }, polygon: { enabled: false }, rectangle: { enabled: false }, select: { enabled: false }, text: { enabled: false }, zoom: { enabled: false } } }, package_namespaceObject_i8 = "0.148.0", editor_engine_namespaceObject_V = "0.1.9";
+      const defaultStudioOptions = { shortcutOptions: { debugPanel: { enabled: false }, ellipse: { enabled: false }, hand: { enabled: false }, image: { enabled: false }, polygon: { enabled: false }, rectangle: { enabled: false }, select: { enabled: false }, text: { enabled: false }, zoom: { enabled: false } } }, package_namespaceObject_i8 = "0.153.0", editor_engine_namespaceObject_V = "0.1.9";
       var ImageFrameSourceType, FramePropertiesType, DocumentType;
       function getEditorResponseData(response, parse = true) {
         return Object.assign(Object.assign({}, response), { parsedData: response.success && response.data ? parse ? JSON.parse(response.data) : response.data : null });
@@ -2576,7 +2576,7 @@ var require_main = __commonJS((exports, module) => {
         }
       }
       _ColorConversionController_editorAPI = new WeakMap;
-      var _ConfigurationController_editorAPI, DeprecatedMediaType, MediaType, ConnectorType, SortBy, SortOrder, ConnectorRegistrationSource, ConnectorMappingTarget, ConnectorMappingSource, ConnectorStateType, ConnectorEventType, ConfigurationController_awaiter = function(thisArg, _arguments, P, generator) {
+      var _ConfigurationController_editorAPI, DeprecatedMediaType, MediaType, ConnectorType, SortBy, SortOrder, ConnectorRegistrationSource, ConnectorMappingSource, ConnectorStateType, ConnectorEventType, ConfigurationController_awaiter = function(thisArg, _arguments, P, generator) {
         return new (P || (P = Promise))(function(resolve, reject) {
           function fulfilled(value) {
             try {
@@ -2638,23 +2638,22 @@ var require_main = __commonJS((exports, module) => {
       }(SortBy || (SortBy = {})), function(SortOrder2) {
         SortOrder2.ascending = "asc", SortOrder2.descending = "desc";
       }(SortOrder || (SortOrder = {})), function(ConnectorRegistrationSource2) {
-        ConnectorRegistrationSource2.url = "url", ConnectorRegistrationSource2.grafx = "grafx";
+        ConnectorRegistrationSource2.url = "url", ConnectorRegistrationSource2.grafx = "grafx", ConnectorRegistrationSource2.local = "local";
       }(ConnectorRegistrationSource || (ConnectorRegistrationSource = {}));
 
       class ConnectorMapping {
-        constructor(mapTo, contextProperty, mapFrom, sourceValue) {
-          this.name = `${mapTo}.${contextProperty}`, this.value = `${mapFrom}.${sourceValue}`;
+        constructor(contextProperty, mapFrom, sourceValue) {
+          this.name = contextProperty, mapFrom === ConnectorMappingSource.variable ? this.value = `${mapFrom}.${sourceValue}` : this.value = sourceValue;
         }
       }
-      (function(ConnectorMappingTarget2) {
-        ConnectorMappingTarget2.query = "query", ConnectorMappingTarget2.download = "download";
-      })(ConnectorMappingTarget || (ConnectorMappingTarget = {})), function(ConnectorMappingSource2) {
-        ConnectorMappingSource2.variable = "var";
-      }(ConnectorMappingSource || (ConnectorMappingSource = {})), function(ConnectorStateType2) {
+      (function(ConnectorMappingSource2) {
+        ConnectorMappingSource2.variable = "var", ConnectorMappingSource2.value = "value";
+      })(ConnectorMappingSource || (ConnectorMappingSource = {})), function(ConnectorStateType2) {
         ConnectorStateType2.loading = "loading", ConnectorStateType2.loaded = "loaded", ConnectorStateType2.running = "running", ConnectorStateType2.ready = "ready", ConnectorStateType2.error = "error";
       }(ConnectorStateType || (ConnectorStateType = {})), function(ConnectorEventType2) {
         ConnectorEventType2.stateChanged = "stateChanged", ConnectorEventType2.authChanged = "authChanged", ConnectorEventType2.reloadRequired = "reloadRequired", ConnectorEventType2.unloaded = "unloaded";
       }(ConnectorEventType || (ConnectorEventType = {}));
+      const grafxMediaConnectorRegistration = { url: "grafx-media.json", source: ConnectorRegistrationSource.local };
       var _ConnectorController_editorAPI, _ConnectorConfigurator_connectorId, _ConnectorConfigurator_res, ConnectorController_awaiter = function(thisArg, _arguments, P, generator) {
         return new (P || (P = Promise))(function(resolve, reject) {
           function fulfilled(value) {
@@ -2697,7 +2696,9 @@ var require_main = __commonJS((exports, module) => {
 
       class ConnectorController {
         constructor(editorAPI) {
-          _ConnectorController_editorAPI.set(this, undefined), this.getAllByType = (type) => ConnectorController_awaiter(this, undefined, undefined, function* () {
+          _ConnectorController_editorAPI.set(this, undefined), this.getById = (id2) => ConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).getConnectorById(id2).then((result) => getEditorResponseData(result));
+          }), this.getAllByType = (type) => ConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).getConnectors(type).then((result) => getEditorResponseData(result));
           }), this.register = (registration) => ConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).registerConnector(JSON.stringify(registration)).then((result) => getEditorResponseData(result));
@@ -2706,15 +2707,19 @@ var require_main = __commonJS((exports, module) => {
           }), this.configure = (id2, configurationCallback) => ConnectorController_awaiter(this, undefined, undefined, function* () {
             const res = yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f");
             return yield this.waitToBeReady(id2), yield configurationCallback(new ConnectorConfigurator(id2, res)), res.updateConnectorConfiguration(id2).then((result) => getEditorResponseData(result));
-          }), this.getById = (id2) => ConnectorController_awaiter(this, undefined, undefined, function* () {
+          }), this.getState = (id2) => ConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).getConnectorState(id2).then((result) => getEditorResponseData(result));
+          }), this.getMappings = (id2) => ConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).getConnectorMappings(id2).then((result) => getEditorResponseData(result));
+          }), this.getOptions = (id2) => ConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield ConnectorController_classPrivateFieldGet(this, _ConnectorController_editorAPI, "f")).getConnectorOptions(id2).then((result) => getEditorResponseData(result));
           }), this.waitToBeReady = (id2, timeoutMilliseconds = 2000) => ConnectorController_awaiter(this, undefined, undefined, function* () {
             let timeout = Math.max(timeoutMilliseconds, 500);
             timeout = Math.min(timeout, 5000);
             let retries = 0;
             try {
               for (;100 * retries < timeout; ) {
-                const result = yield this.getById(id2);
+                const result = yield this.getState(id2);
                 if (result.success && result.parsedData && (result.parsedData.type === ConnectorStateType.running || result.parsedData.type === ConnectorStateType.ready))
                   return getEditorResponseData({ data: null, success: true, error: undefined, status: 0, parsedData: undefined }, false);
                 yield new Promise((resolve) => setTimeout(resolve, 100)), retries++;
@@ -2968,25 +2973,23 @@ var require_main = __commonJS((exports, module) => {
 
       class FontConnectorController {
         constructor(editorAPI) {
-          _FontConnectorController_editorAPI.set(this, undefined), _FontConnectorController_blobAPI.set(this, undefined), this.query = (id2, queryOptions, context) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+          _FontConnectorController_editorAPI.set(this, undefined), _FontConnectorController_blobAPI.set(this, undefined), this.query = (id2, queryOptions, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorQuery(id2, JSON.stringify(queryOptions), JSON.stringify(context)).then((result) => getEditorResponseData(result));
-          }), this.detail = (id2, fontId) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorDetail(id2, fontId).then((result) => getEditorResponseData(result));
-          }), this.download = (id2, fontId, downloadType, context) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+          }), this.detail = (id2, fontId, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorDetail(id2, fontId, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.download = (id2, fontId, downloadType, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_blobAPI, "f")).fontConnectorDownload(id2, fontId, downloadType, JSON.stringify(context)).then((result) => {
               var _a;
               return (_a = result) !== null && _a !== undefined ? _a : result;
             });
-          }), this.upload = (id2, fontId, blob) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorUpload(id2, fontId, blob).then((result) => getEditorResponseData(result));
-          }), this.remove = (id2, fontId) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorRemove(id2, fontId).then((result) => getEditorResponseData(result));
-          }), this.copy = (id2, fontId, newName) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorCopy(id2, fontId, newName).then((result) => getEditorResponseData(result));
-          }), this.getQueryOptions = (id2) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorGetQueryOptions(id2).then((result) => getEditorResponseData(result));
-          }), this.getDownloadOptions = (id2) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorGetDownloadOptions(id2).then((result) => getEditorResponseData(result));
+          }), this.upload = (id2, fontId, blob, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorUpload(id2, fontId, blob, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.remove = (id2, fontId, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorRemove(id2, fontId, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.copy = (id2, fontId, newName, context = {}) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorCopy(id2, fontId, newName, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.getConfigurationOptions = (id2) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorGetConfigurationOptions(id2).then((result) => getEditorResponseData(result));
           }), this.getCapabilities = (id2) => FontConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield FontConnectorController_classPrivateFieldGet(this, _FontConnectorController_editorAPI, "f")).fontConnectorGetCapabilities(id2).then((result) => getEditorResponseData(result));
           }), this.parseDeprecatedFontType = (deprecatedType) => deprecatedType === DeprecatedMediaType.file ? MediaType.file : deprecatedType === DeprecatedMediaType.collection ? MediaType.collection : undefined, FontConnectorController_classPrivateFieldSet(this, _FontConnectorController_editorAPI, editorAPI, "f"), FontConnectorController_classPrivateFieldSet(this, _FontConnectorController_blobAPI, editorAPI, "f");
@@ -9271,25 +9274,23 @@ var require_main = __commonJS((exports, module) => {
 
       class MediaConnectorController {
         constructor(editorAPI) {
-          _MediaConnectorController_editorAPI.set(this, undefined), _MediaConnectorController_blobAPI.set(this, undefined), this.query = (id2, queryOptions, context) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+          _MediaConnectorController_editorAPI.set(this, undefined), _MediaConnectorController_blobAPI.set(this, undefined), this.query = (id2, queryOptions, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorQuery(id2, JSON.stringify(queryOptions), JSON.stringify(context)).then((result) => getEditorResponseData(result));
-          }), this.detail = (id2, mediaId) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorDetail(id2, mediaId).then((result) => getEditorResponseData(result));
-          }), this.download = (id2, mediaId, downloadType, context) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+          }), this.detail = (id2, mediaId, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorDetail(id2, mediaId, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.download = (id2, mediaId, downloadType, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_blobAPI, "f")).mediaConnectorDownload(id2, mediaId, downloadType, JSON.stringify(context)).then((result) => {
               var _a;
               return (_a = result) !== null && _a !== undefined ? _a : result;
             });
-          }), this.upload = (id2, mediaId, blob) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorUpload(id2, mediaId, blob).then((result) => getEditorResponseData(result));
-          }), this.remove = (id2, mediaId) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorRemove(id2, mediaId).then((result) => getEditorResponseData(result));
-          }), this.copy = (id2, mediaId, newName) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorCopy(id2, mediaId, newName).then((result) => getEditorResponseData(result));
-          }), this.getQueryOptions = (id2) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorGetQueryOptions(id2).then((result) => getEditorResponseData(result));
-          }), this.getDownloadOptions = (id2) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
-            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorGetDownloadOptions(id2).then((result) => getEditorResponseData(result));
+          }), this.upload = (id2, mediaId, blob, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorUpload(id2, mediaId, blob, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.remove = (id2, mediaId, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorRemove(id2, mediaId, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.copy = (id2, mediaId, newName, context = {}) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorCopy(id2, mediaId, newName, JSON.stringify(context)).then((result) => getEditorResponseData(result));
+          }), this.getConfigurationOptions = (id2) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
+            return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorGetConfigurationOptions(id2).then((result) => getEditorResponseData(result));
           }), this.getCapabilities = (id2) => MediaConnectorController_awaiter(this, undefined, undefined, function* () {
             return (yield MediaConnectorController_classPrivateFieldGet(this, _MediaConnectorController_editorAPI, "f")).mediaConnectorGetCapabilities(id2).then((result) => getEditorResponseData(result));
           }), this.parseDeprecatedMediaType = (deprecatedType) => deprecatedType === DeprecatedMediaType.file ? MediaType.file : deprecatedType === DeprecatedMediaType.collection ? MediaType.collection : undefined, MediaConnectorController_classPrivateFieldSet(this, _MediaConnectorController_editorAPI, editorAPI, "f"), MediaConnectorController_classPrivateFieldSet(this, _MediaConnectorController_blobAPI, editorAPI, "f");
@@ -9626,7 +9627,7 @@ var require_main = __commonJS((exports, module) => {
         }
       }
       _ToolController_editorAPI = new WeakMap;
-      var _UndoManagerController_editorAPI, UndoManagerController_awaiter = function(thisArg, _arguments, P, generator) {
+      var _UndoManagerController_editorAPI, _UndoManagerController_advanced, _UndoManagerController_sdk, _AdvancedUndoManagerController_editorAPI, UndoManagerController_awaiter = function(thisArg, _arguments, P, generator) {
         return new (P || (P = Promise))(function(resolve, reject) {
           function fulfilled(value) {
             try {
@@ -9667,15 +9668,36 @@ var require_main = __commonJS((exports, module) => {
       };
 
       class UndoManagerController {
-        constructor(children) {
-          _UndoManagerController_editorAPI.set(this, undefined), this.undo = () => UndoManagerController_awaiter(this, undefined, undefined, function* () {
+        constructor(children, sdk) {
+          _UndoManagerController_editorAPI.set(this, undefined), _UndoManagerController_advanced.set(this, undefined), _UndoManagerController_sdk.set(this, undefined), this.undo = () => UndoManagerController_awaiter(this, undefined, undefined, function* () {
             return (yield UndoManagerController_classPrivateFieldGet(this, _UndoManagerController_editorAPI, "f")).undo().then((result) => getEditorResponseData(result));
           }), this.redo = () => UndoManagerController_awaiter(this, undefined, undefined, function* () {
             return (yield UndoManagerController_classPrivateFieldGet(this, _UndoManagerController_editorAPI, "f")).redo().then((result) => getEditorResponseData(result));
-          }), UndoManagerController_classPrivateFieldSet(this, _UndoManagerController_editorAPI, children, "f");
+          }), this.record = (operationName, undoOperationCallback) => UndoManagerController_awaiter(this, undefined, undefined, function* () {
+            try {
+              yield UndoManagerController_classPrivateFieldGet(this, _UndoManagerController_advanced, "f").begin(operationName), yield undoOperationCallback(UndoManagerController_classPrivateFieldGet(this, _UndoManagerController_sdk, "f"));
+            } catch (error) {
+              throw error;
+            } finally {
+              yield UndoManagerController_classPrivateFieldGet(this, _UndoManagerController_advanced, "f").end();
+            }
+          }), UndoManagerController_classPrivateFieldSet(this, _UndoManagerController_editorAPI, children, "f"), UndoManagerController_classPrivateFieldSet(this, _UndoManagerController_sdk, sdk, "f"), UndoManagerController_classPrivateFieldSet(this, _UndoManagerController_advanced, new AdvancedUndoManagerController(children), "f");
         }
       }
-      _UndoManagerController_editorAPI = new WeakMap;
+      _UndoManagerController_editorAPI = new WeakMap, _UndoManagerController_advanced = new WeakMap, _UndoManagerController_sdk = new WeakMap;
+
+      class AdvancedUndoManagerController {
+        constructor(children) {
+          _AdvancedUndoManagerController_editorAPI.set(this, undefined), this.begin = (operationName) => UndoManagerController_awaiter(this, undefined, undefined, function* () {
+            return (yield UndoManagerController_classPrivateFieldGet(this, _AdvancedUndoManagerController_editorAPI, "f")).begin(operationName).then((result) => getEditorResponseData(result));
+          }), this.beginIfNoneActive = (operationName) => UndoManagerController_awaiter(this, undefined, undefined, function* () {
+            return (yield UndoManagerController_classPrivateFieldGet(this, _AdvancedUndoManagerController_editorAPI, "f")).beginIfNoneActive(operationName).then((result) => getEditorResponseData(result));
+          }), this.end = () => UndoManagerController_awaiter(this, undefined, undefined, function* () {
+            return (yield UndoManagerController_classPrivateFieldGet(this, _AdvancedUndoManagerController_editorAPI, "f")).end().then((result) => getEditorResponseData(result));
+          }), UndoManagerController_classPrivateFieldSet(this, _AdvancedUndoManagerController_editorAPI, children, "f");
+        }
+      }
+      _AdvancedUndoManagerController_editorAPI = new WeakMap;
 
       class UtilsController {
         constructor() {
@@ -9765,8 +9787,10 @@ var require_main = __commonJS((exports, module) => {
             return (yield VariableController_classPrivateFieldGet(this, _VariableController_editorAPI, "f")).setVariableIsRequired(id2, isRequired).then((result) => getEditorResponseData(result));
           }), this.setIsReadonly = (id2, isReadonly) => VariableController_awaiter(this, undefined, undefined, function* () {
             return (yield VariableController_classPrivateFieldGet(this, _VariableController_editorAPI, "f")).setVariableIsReadonly(id2, isReadonly).then((result) => getEditorResponseData(result));
-          }), this.setImageVariableConnector = (id2, connectorId) => VariableController_awaiter(this, undefined, undefined, function* () {
-            return (yield VariableController_classPrivateFieldGet(this, _VariableController_editorAPI, "f")).setImageVariableConnector(id2, connectorId).then((result) => getEditorResponseData(result));
+          }), this.getImageVariableConnectorId = (id2) => VariableController_awaiter(this, undefined, undefined, function* () {
+            return (yield VariableController_classPrivateFieldGet(this, _VariableController_editorAPI, "f")).getImageVariableConnectorId(id2).then((result) => getEditorResponseData(result));
+          }), this.setImageVariableConnector = (id2, registration) => VariableController_awaiter(this, undefined, undefined, function* () {
+            return (yield VariableController_classPrivateFieldGet(this, _VariableController_editorAPI, "f")).setImageVariableConnector(id2, JSON.stringify(registration)).then((result) => getEditorResponseData(result));
           }), this.removeSource = (id2) => VariableController_awaiter(this, undefined, undefined, function* () {
             return this.setValue(id2, null);
           }), VariableController_classPrivateFieldSet(this, _VariableController_editorAPI, editorAPI, "f");
@@ -9785,10 +9809,10 @@ var require_main = __commonJS((exports, module) => {
       class SDK {
         constructor(config) {
           this.loadEditor = () => {
-            connector(this.config.editorLink || FIXED_EDITOR_LINK, { onActionsChanged: this.subscriber.onActionsChanged, onStateChanged: this.subscriber.onStateChanged, onDocumentLoaded: this.subscriber.onDocumentLoaded, onSelectedFrameContentChanged: this.subscriber.onSelectedFrameContentChanged, onSelectedFrameLayoutChanged: this.subscriber.onSelectedFrameLayoutChanged, onSelectedLayoutPropertiesChanged: this.subscriber.onSelectedLayoutPropertiesChanged, onPageSelectionChanged: this.subscriber.onPageSelectionChanged, onScrubberPositionChanged: this.subscriber.onAnimationPlaybackChanged, onFrameAnimationsChanged: this.subscriber.onAnimationChanged, onVariableListChanged: this.subscriber.onVariableListChanged, onSelectedToolChanged: this.subscriber.onSelectedToolChanged, onUndoStateChanged: this.subscriber.onUndoStateChanged, onSelectedLayoutFramesChanged: this.subscriber.onSelectedLayoutFramesChanged, onSelectedTextStyleChanged: this.subscriber.onSelectedTextStyleChanged, onColorsChanged: this.subscriber.onColorsChanged, onParagraphStylesChanged: this.subscriber.onParagraphStylesChanged, onCharacterStylesChanged: this.subscriber.onCharacterStylesChanged, onFontsChanged: this.subscriber.onFontsChanged, onSelectedLayoutIdChanged: this.subscriber.onSelectedLayoutIdChanged, onLayoutsChanged: this.subscriber.onLayoutsChanged, onConnectorEvent: this.subscriber.onConnectorEvent, onZoomChanged: this.subscriber.onZoomChanged, onPageSizeChanged: this.subscriber.onPageSizeChanged, onShapeCornerRadiusChanged: this.subscriber.onShapeCornerRadiusChanged, onCropActiveFrameIdChanged: this.subscriber.onCropActiveFrameIdChanged, onAsyncError: this.subscriber.onAsyncError }, this.setConnection, this.config.editorId, this.config.studioStyling), this.editorAPI = connection == null ? undefined : connection.promise.then((editorAPI) => editorAPI), this.action = new ActionController(this.editorAPI), this.layout = new LayoutController(this.editorAPI), this.frame = new FrameController(this.editorAPI), this.animation = new AnimationController(this.editorAPI), this.document = new DocumentController(this.editorAPI), this.configuration = new ConfigurationController(this.editorAPI), this.variable = new VariableController(this.editorAPI), this.utils = new UtilsController, this.tool = new ToolController(this.editorAPI), this.page = new PageController(this.editorAPI), this.debug = new DebugController(this.editorAPI), this.undoManager = new UndoManagerController(this.editorAPI), this.textSelection = new TextStyleController(this.editorAPI), this.colorStyle = new ColorStyleController(this.editorAPI), this.paragraphStyle = new ParagraphStyleController(this.editorAPI), this.characterStyle = new CharacterStyleController(this.editorAPI), this.mediaConnector = new MediaConnectorController(this.editorAPI), this.fontConnector = new FontConnectorController(this.editorAPI), this.connector = new ConnectorController(this.editorAPI), this.font = new FontController(this.editorAPI), this.experiment = new ExperimentController(this.editorAPI), this.canvas = new CanvasController(this.editorAPI), this.shape = new ShapeController(this.editorAPI), this.info = new InfoController, this.configuration.setValue(WellKnownConfigurationKeys.GraFxStudioSdkVersion, package_namespaceObject_i8), this.configuration.setValue(WellKnownConfigurationKeys.GraFxStudioDocumentType, this.config.documentType || DocumentType.template), this.configuration.updateStudioOptions(this.config.studioOptions || defaultStudioOptions);
+            connector(this.config.editorLink || FIXED_EDITOR_LINK, { onActionsChanged: this.subscriber.onActionsChanged, onStateChanged: this.subscriber.onStateChanged, onDocumentLoaded: this.subscriber.onDocumentLoaded, onSelectedFrameContentChanged: this.subscriber.onSelectedFrameContentChanged, onSelectedFrameLayoutChanged: this.subscriber.onSelectedFrameLayoutChanged, onSelectedLayoutPropertiesChanged: this.subscriber.onSelectedLayoutPropertiesChanged, onPageSelectionChanged: this.subscriber.onPageSelectionChanged, onScrubberPositionChanged: this.subscriber.onAnimationPlaybackChanged, onFrameAnimationsChanged: this.subscriber.onAnimationChanged, onVariableListChanged: this.subscriber.onVariableListChanged, onSelectedToolChanged: this.subscriber.onSelectedToolChanged, onUndoStateChanged: this.subscriber.onUndoStateChanged, onSelectedLayoutFramesChanged: this.subscriber.onSelectedLayoutFramesChanged, onSelectedTextStyleChanged: this.subscriber.onSelectedTextStyleChanged, onColorsChanged: this.subscriber.onColorsChanged, onParagraphStylesChanged: this.subscriber.onParagraphStylesChanged, onCharacterStylesChanged: this.subscriber.onCharacterStylesChanged, onFontsChanged: this.subscriber.onFontsChanged, onSelectedLayoutIdChanged: this.subscriber.onSelectedLayoutIdChanged, onLayoutsChanged: this.subscriber.onLayoutsChanged, onConnectorEvent: this.subscriber.onConnectorEvent, onZoomChanged: this.subscriber.onZoomChanged, onPageSizeChanged: this.subscriber.onPageSizeChanged, onShapeCornerRadiusChanged: this.subscriber.onShapeCornerRadiusChanged, onCropActiveFrameIdChanged: this.subscriber.onCropActiveFrameIdChanged, onAsyncError: this.subscriber.onAsyncError }, this.setConnection, this.config.editorId, this.config.studioStyling), this.editorAPI = connection == null ? undefined : connection.promise.then((editorAPI) => editorAPI), this.action = new ActionController(this.editorAPI), this.layout = new LayoutController(this.editorAPI), this.frame = new FrameController(this.editorAPI), this.animation = new AnimationController(this.editorAPI), this.document = new DocumentController(this.editorAPI), this.configuration = new ConfigurationController(this.editorAPI), this.utils = new UtilsController, this.tool = new ToolController(this.editorAPI), this.page = new PageController(this.editorAPI), this.debug = new DebugController(this.editorAPI), this.undoManager = new UndoManagerController(this.editorAPI, this), this.textSelection = new TextStyleController(this.editorAPI), this.colorStyle = new ColorStyleController(this.editorAPI), this.paragraphStyle = new ParagraphStyleController(this.editorAPI), this.characterStyle = new CharacterStyleController(this.editorAPI), this.mediaConnector = new MediaConnectorController(this.editorAPI), this.fontConnector = new FontConnectorController(this.editorAPI), this.connector = new ConnectorController(this.editorAPI), this.variable = new VariableController(this.editorAPI), this.font = new FontController(this.editorAPI), this.experiment = new ExperimentController(this.editorAPI), this.canvas = new CanvasController(this.editorAPI), this.shape = new ShapeController(this.editorAPI), this.info = new InfoController, this.configuration.setValue(WellKnownConfigurationKeys.GraFxStudioSdkVersion, package_namespaceObject_i8), this.configuration.setValue(WellKnownConfigurationKeys.GraFxStudioDocumentType, this.config.documentType || DocumentType.template), this.configuration.updateStudioOptions(this.config.studioOptions || defaultStudioOptions);
           }, this.setConnection = (newConnection) => {
             connection = newConnection;
-          }, this.config = config, this.connection = connection, this.editorAPI = connection == null ? undefined : connection.promise.then((child) => child), this.action = new ActionController(this.editorAPI), this.layout = new LayoutController(this.editorAPI), this.frame = new FrameController(this.editorAPI), this.shape = new ShapeController(this.editorAPI), this.connector = new ConnectorController(this.editorAPI), this.mediaConnector = new MediaConnectorController(this.editorAPI), this.fontConnector = new FontConnectorController(this.editorAPI), this.animation = new AnimationController(this.editorAPI), this.document = new DocumentController(this.editorAPI), this.configuration = new ConfigurationController(this.editorAPI), this.variable = new VariableController(this.editorAPI), this.utils = new UtilsController, this.subscriber = new SubscriberController(this.config), this.tool = new ToolController(this.editorAPI), this.page = new PageController(this.editorAPI), this.debug = new DebugController(this.editorAPI), this.undoManager = new UndoManagerController(this.editorAPI), this.textSelection = new TextStyleController(this.editorAPI), this.colorStyle = new ColorStyleController(this.editorAPI), this.paragraphStyle = new ParagraphStyleController(this.editorAPI), this.characterStyle = new CharacterStyleController(this.editorAPI), this.font = new FontController(this.editorAPI), this.experiment = new ExperimentController(this.editorAPI), this.canvas = new CanvasController(this.editorAPI), this.colorConversion = new ColorConversionController(this.editorAPI), this.info = new InfoController;
+          }, this.config = config, this.connection = connection, this.editorAPI = connection == null ? undefined : connection.promise.then((child) => child), this.action = new ActionController(this.editorAPI), this.layout = new LayoutController(this.editorAPI), this.frame = new FrameController(this.editorAPI), this.shape = new ShapeController(this.editorAPI), this.undoManager = new UndoManagerController(this.editorAPI, this), this.connector = new ConnectorController(this.editorAPI), this.mediaConnector = new MediaConnectorController(this.editorAPI), this.fontConnector = new FontConnectorController(this.editorAPI), this.animation = new AnimationController(this.editorAPI), this.document = new DocumentController(this.editorAPI), this.configuration = new ConfigurationController(this.editorAPI), this.variable = new VariableController(this.editorAPI), this.utils = new UtilsController, this.subscriber = new SubscriberController(this.config), this.tool = new ToolController(this.editorAPI), this.page = new PageController(this.editorAPI), this.debug = new DebugController(this.editorAPI), this.textSelection = new TextStyleController(this.editorAPI), this.colorStyle = new ColorStyleController(this.editorAPI), this.paragraphStyle = new ParagraphStyleController(this.editorAPI), this.characterStyle = new CharacterStyleController(this.editorAPI), this.font = new FontController(this.editorAPI), this.experiment = new ExperimentController(this.editorAPI), this.canvas = new CanvasController(this.editorAPI), this.colorConversion = new ColorConversionController(this.editorAPI), this.info = new InfoController;
         }
       }
       var SlideDirections, ShakeDirections, EaseTypes, TweenTypes, BasicAnimationsEmphasisStyles, LayoutType, VariableType, FontWeights, Alignment, TextPosition, Case, Scripting, HorizontalAlign, SelectedTextStyleSections, SelectedTextStyles, ColorType, ColorUsageType, MediaDownloadType, FontDownloadType, ActionEditorEvent, ShapeType, CornerRadiusType;

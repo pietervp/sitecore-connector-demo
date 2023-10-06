@@ -9,11 +9,12 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@chili-publish/studio-sdk": "^0.148.0"
+    "@chili-publish/studio-sdk": "^0.153.0"
   },
   "scripts": {
     "build": "bun run helpers/pre_build.js && bun build --target=browser --outfile=public/js/sdk.js sdk-frontend.ts",
-    "build-studio": "bun run helpers/pre_build.js && bun build --target=browser --outfile=public/js/studio.js studio-frontend.ts",
+    "build-studio": "bun run helpers/pre_build.js && bun build --target=browser --outfile=public/js/studio.js studio-frontend.ts && bun run replace-env",
+    "replace-env": "sed -i 's/Bun.env.ENGINE_URL/'\"${ENGINE_URL}\"'/g' public/js/studio.js && env",
     "server": "bun run build && bun run --watch server.ts"
   }
 }

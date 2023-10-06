@@ -1,11 +1,11 @@
 /// <reference lib="dom" /> 
 /// <reference lib="dom.iterable" />
-
 import type SDK from "@chili-publish/studio-sdk";
-import { ConnectorRegistrationSource, FrameTypeEnum, VariableType } from "@chili-publish/studio-sdk";
+import { ConnectorRegistration, ConnectorRegistrationSource, FrameTypeEnum, VariableType } from "@chili-publish/studio-sdk";
 
 var script = document.createElement('script');
-script.src = "https://stgrafxstudiodevpublic.blob.core.windows.net/shared/studio-ui-sitecore/bundle.js";
+
+script.src = "./studio-ui.js";
 script.onload = function () {
     startup();
 };
@@ -31,7 +31,7 @@ declare global {
 
 function startup() {
 
-    const engine_version = 'https://stgrafxstudiodevpublic.blob.core.windows.net/editor/457-68c5f7cb16637e4852c2521401526c944a403f2e/web';
+    const engine_version = Bun.env.ENGINE_URL;
     const demoDocumentLoader = new DemoDocumentLoader(engine_version);
 
     return new window.StudioUI('app', {
@@ -39,19 +39,21 @@ function startup() {
         projectName: 'Demo',
         onProjectInfoRequested: demoDocumentLoader.onProjectInfoRequested,
         onProjectTemplateRequested: demoDocumentLoader.onProjectTemplateRequested,
-        onProjectLoaded: (project: Project, sdk: SDK) => {
+        onProjectLoaded: (project: Project) => {
 
             setTimeout(async () => {
-
+                
+                var sdk = window.SDK as SDK;
                 var info = await fetch("./api/info").then(res => res.json());
+                log('load-event', 'info', info);
                 log('load-event', 'project loaded', project, sdk);
                 log('load-event',`about to set '${info.sitecore_api_url}'`);
                 log('load-event-sdk.configuration.setValue',await sdk.configuration.setValue("SITECORE_API_BASE", info.sitecore_api_url));
                 log('load-event','done setting');
 
-                const registration = {
+                const registration : ConnectorRegistration = {
                     source: ConnectorRegistrationSource.url,
-                    url: "./connector.json"
+                    url: "http://localhost:3004/connector.json"
                 };
 
                 // add image frame to document
@@ -59,7 +61,7 @@ function startup() {
                 var varId = await sdk.variable.create("", VariableType.image);
                 log('sdk.frame.create+sdk.variable.create', frameId, varId);
 
-                var newConnector = await sdk.variable.setImageVariableConnector(varId.parsedData!, JSON.stringify(registration))
+                var newConnector = await sdk.variable.setImageVariableConnector(varId.parsedData!, registration)
                 log('sdk.variable.setImageVariableConnector', newConnector);
 
                 log('auth-info',info);
@@ -67,7 +69,8 @@ function startup() {
                     log('config.setHttpHeader', await config.setHttpHeader("Authorization", "Bearer " + info.sitecore_api_token));
                 }));
 
-                log('sdk.variable.setValue',await sdk.variable.setValue(varId.parsedData!, "https://dummyimage.com/600x400/000/fff"));
+                //log('sdk.variable.setValue',await sdk.variable.setValue(varId.parsedData!, "./dummy.webp"));
+
                 //@ts-ignore
                 log('sdk.frame.updateImageSource', await sdk.frame.updateImageSource(frameId.parsedData!, { 'type': 'variable', 'id': varId.parsedData! }));
             }, 2000); // we need to introduce an additional callback to make sure the sdk is fully loaded
@@ -140,18 +143,6 @@ class DemoDocumentLoader {
         };
         this.onProjectTemplateRequested = async (): Promise<string> => {
             return "{}";
-            try {
-                var req = (await fetch(`${editorLink}/assets/assets/documents/demo.json`));
-
-                if (req.status == 200) {
-                    return req.text();
-                }
-                else {
-                    return (await fetch(`${editorLink}/assets/packages/runtime_assets/assets/documents/demo.json`)).text();
-                }
-            } catch (error) {
-                return (await fetch(`${editorLink}/assets/packages/runtime_assets/assets/documents/demo.json`)).text();
-            }
         };
         this.onAuthenticationExpired = async (): Promise<string> => {
             return '';

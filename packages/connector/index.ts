@@ -8,18 +8,18 @@ export class ContentHubConnector implements MediaConnector {
         this.runtime = runtime;
     }
 
-    query(options: QueryOptions, context: Dictionary): Promise<MediaPage> {
+    async query(options: QueryOptions, context: Dictionary): Promise<MediaPage> {
         this.log("query", {options, context});
         
         // return dummy collection
         return Promise.resolve({
             data: [
                 {
-                    id: "https://dummyimage.com/600x400/000/fff",
+                    id: "./dummy.webp",
                     name: "test",
                     type: 0,
                     preview: {
-                        url: "https://dummyimage.com/600x400/000/fff",
+                        url: "./dummy.webp",
                         width: 272,
                         height: 92
                     },
@@ -36,14 +36,14 @@ export class ContentHubConnector implements MediaConnector {
             }
         });
     }
-    detail(id: string, context: Dictionary): Promise<MediaDetail> {
-        this.log("detail", {id, context});
+    async detail(id: string, context: Dictionary): Promise<MediaDetail> {
+        this.log("detail", id);
         return Promise.resolve({
-            id: "https://dummyimage.com/600x400/000/fff",
+            id: id,
             name: "test",
             type: 0,
             preview: {
-                url: "https://dummyimage.com/600x400/000/fff",
+                url: "./dummy.webp",
                 width: 272,
                 height: 92
             },
@@ -55,7 +55,7 @@ export class ContentHubConnector implements MediaConnector {
                 "api": this.runtime.options["SITECORE_API_BASE"] ?? "not set",
                 "test": "random value"
             }
-        } as Media);
+        } as MediaDetail);
     }
     async download(id: string, previewType: DownloadType, context: Dictionary): Promise<ArrayBufferPointer> {
         this.log("download", {id, previewType, context});
@@ -87,7 +87,7 @@ export class ContentHubConnector implements MediaConnector {
             upload: false,
             remove: false,
             query: true,
-            detail: false,
+            detail: true,
             filtering: true,
         }
     }

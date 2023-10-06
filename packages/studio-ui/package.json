@@ -9,7 +9,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "build": "bun build --watch --target=browser --outfile=public/js/index.js frontend.ts",
+    "build": "bun build --target=browser --outfile=public/js/index.js frontend.ts",
     "server": "bun run --watch server.ts"
   }
 }

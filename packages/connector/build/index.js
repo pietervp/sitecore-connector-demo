@@ -2,17 +2,17 @@ export class ContentHubConnector {
     constructor(runtime) {
         this.runtime = runtime;
     }
-    query(options, context) {
+    async query(options, context) {
         this.log("query", { options, context });
         // return dummy collection
         return Promise.resolve({
             data: [
                 {
-                    id: "https://dummyimage.com/600x400/000/fff",
+                    id: "./dummy.webp",
                     name: "test",
                     type: 0,
                     preview: {
-                        url: "https://dummyimage.com/600x400/000/fff",
+                        url: "./dummy.webp",
                         width: 272,
                         height: 92
                     },
@@ -29,14 +29,14 @@ export class ContentHubConnector {
             }
         });
     }
-    detail(id, context) {
-        this.log("detail", { id, context });
+    async detail(id, context) {
+        this.log("detail", id);
         return Promise.resolve({
-            id: "https://dummyimage.com/600x400/000/fff",
+            id: id,
             name: "test",
             type: 0,
             preview: {
-                url: "https://dummyimage.com/600x400/000/fff",
+                url: "./dummy.webp",
                 width: 272,
                 height: 92
             },
@@ -79,7 +79,7 @@ export class ContentHubConnector {
             upload: false,
             remove: false,
             query: true,
-            detail: false,
+            detail: true,
             filtering: true,
         };
     }
